@@ -1,0 +1,6 @@
+# a titkok
+*.env
+# a logok
+*.log
+# a tmp fajlok
+*.tmp
