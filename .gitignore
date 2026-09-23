@@ -4,3 +4,6 @@
 *.log
 # a tmp fajlok
 *.tmp
+# pontos fajlnevek
+fuggveny.sh
+hibateszt.sh
