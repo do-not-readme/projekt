@@ -1,5 +1,5 @@
 # Tanuloprojekt
-# systemd gyakorlas
+## Systemd gyakorlas
 - ket statikus weboldal
 - ellenorzo szkriptek
 
