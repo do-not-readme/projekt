@@ -2,7 +2,7 @@
 ## Systemd gyakorlas
 - ket statikus weboldal
 ## ellenorzo szkriptek
-### ellenoriz.sh
+### fajl-info.sh
 - megvizsgalja, hogy egy fajl letezik-e
 - mappa vagy fajl
 - megnezi, hogy olvashato- es irhato-e
