@@ -13,3 +13,6 @@
 - fut-e a weboldal szolgaltatas
 
 
+
+
+A systemd mappaban 3 weboldal szolgaltatas van, viszont az utvonalakat a sajat gephez kell igazitani

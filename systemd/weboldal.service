@@ -1,0 +1,11 @@
+[Unit]
+Description=Ez egy leiras!
+
+[Service]
+WorkingDirectory=/home/dont_readme/projekt/weboldal
+ExecStart=/usr/bin/python -m http.server --bind 127.0.0.1
+Restart=on-failure
+
+[Install]
+WantedBy=default.target
+

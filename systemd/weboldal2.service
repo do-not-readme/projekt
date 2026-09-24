@@ -1,0 +1,10 @@
+[Unit]
+Description=Ez az uj weboldalam!
+
+[Service]
+WorkingDirectory=/home/dont_readme/projekt/weboldal2
+ExecStart=/usr/bin/python -m http.server 8001 --bind 127.0.0.1 
+Restart=on-failure
+
+[Install]
+WantedBy=default.target
