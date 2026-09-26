@@ -1,0 +1,13 @@
+name: Teszt
+
+
+on: push
+
+jobs:
+  koszones:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo 'Szia a futtatorol!'
+      - run: pwd
+      - run: ls -la
+
