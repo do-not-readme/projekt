@@ -7,6 +7,7 @@ jobs:
   koszones:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
       - run: echo 'Szia a futtatorol!'
       - run: pwd
       - run: ls -la
