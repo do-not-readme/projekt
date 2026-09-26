@@ -4,15 +4,18 @@ services:
     image: weboldal:1.1
     ports:
       - "8080:8000"
+    restart: unless-stopped
   weboldal2:
     image: weboldal:1.1
     ports:
       - "8081:8000"
+    restart: unless-stopped
     volumes:
       - ./weboldal2:/app
   weboldal3:
     image: weboldal:1.1
     ports:
       - "8082:8000"
+    restart: unless-stopped
     volumes:
       - ./weboldal3:/app
