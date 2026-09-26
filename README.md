@@ -1,6 +1,6 @@
 # Tanuloprojekt
-## Systemd gyakorlas
-- ket statikus weboldal
+## Systemd gyakorlas(korabbi verzio)
+- harom statikus weboldal
 ## ellenorzo szkriptek
 ### fajl-info.sh
 - megvizsgalja, hogy egy fajl letezik-e
@@ -13,6 +13,11 @@
 - fut-e a weboldal szolgaltatas
 
 
-
-
 A systemd mappaban 3 weboldal szolgaltatas van, viszont az utvonalakat a sajat gephez kell igazitani
+
+Ezert keszitettem egy konteneres valtozatot.
+
+## A konteneres valtozat inditasa(aktualis verio)
+- 'docker compose up -d'
+- a weboldalak elerhetok a kovetkezo portokon: 8080, 8081, 8082
+- ellenorzese a './szkriptek/ellenorzo.sh'- val
