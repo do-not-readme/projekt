@@ -16,7 +16,14 @@ port_check() {
 }
 
 szolgaltatas_fut() {
-	systemctl --user is-active --quiet "$1"
+	local allapot
+	allapot="$(docker inspect -f '{{.State.Status}}' "$1")" 1>/dev/null
+	if [[ "$allapot" == "running" ]]; then
+		return 0
+	else
+		hibak=$((hibak + 1))
+		return 1
+	fi
 }
 
 ellenoriz() {
@@ -34,21 +41,23 @@ ellenoriz() {
 
 ## Szolgaltatas ellenorzes
 
-a_cim='weboldal'
-b_cim='weboldal2'
+a_cim='projekt-weboldal-1'
+b_cim='projekt-weboldal2-1'
+c_cim='projekt-weboldal3-1'
 
 ellenoriz "[$a_cim] szolgaltatas ellenorzes" szolgaltatas_fut "$a_cim"
 ellenoriz "[$b_cim] szolgaltatas ellenorzes" szolgaltatas_fut "$b_cim"
-
+ellenoriz "[$c_cim] szolgaltatas ellenorzese" szolgaltatas_fut "$c_cim"
 
 ## Port ellenorzes
 
-a_port='8000'
-b_port='8001'
+a_port='8080'
+b_port='8081'
+c_port='8082'
 
 ellenoriz "[$a_port] port ellenorzes" port_check "$a_port"
 ellenoriz "[$b_port] port ellenorzes" port_check "$b_port"
-
+ellenoriz "[$c_port] port ellenorzes" port_check "$c_port"
 
 if [[ "$hibak" -gt 0 ]]; then
 	exit 1
