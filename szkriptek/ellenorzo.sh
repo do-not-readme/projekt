@@ -10,18 +10,16 @@ port_check() {
 	if [[ "$kod" -eq 200 ]]; then
 		return 0
 	else
-		hibak=$((hibak + 1))
 		return 1
 	fi
 }
 
 szolgaltatas_fut() {
 	local allapot
-	allapot="$(docker inspect -f '{{.State.Status}}' "$1")" 1>/dev/null
+	allapot="$(docker inspect -f '{{.State.Status}}' "$1")"
 	if [[ "$allapot" == "running" ]]; then
 		return 0
 	else
-		hibak=$((hibak + 1))
 		return 1
 	fi
 }
