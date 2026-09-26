@@ -1,5 +1,5 @@
 # Tanuloprojekt
-## Systemd gyakorlas(korabbi verzio)
+## Systemd gyakorlas (korabbi verzio)
 - harom statikus weboldal
 ## ellenorzo szkriptek
 ### fajl-info.sh
@@ -17,7 +17,7 @@ A systemd mappaban 3 weboldal szolgaltatas van, viszont az utvonalakat a sajat g
 
 Ezert keszitettem egy konteneres valtozatot.
 
-## A konteneres valtozat inditasa (aktualis verio)
+## A konteneres valtozat inditasa (aktualis verzio)
 - `docker compose up -d`
 - a weboldalak elerhetok a kovetkezo portokon: 8080, 8081, 8082
 - ellenorzese a `./szkriptek/ellenorzo.sh`- val
