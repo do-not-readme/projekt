@@ -11,4 +11,6 @@ jobs:
       - run: echo 'Szia a futtatorol!'
       - run: pwd
       - run: ls -la
-
+      - run: docker --version
+      - run: docker compose version
+      - run: whoami
