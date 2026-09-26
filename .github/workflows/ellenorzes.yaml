@@ -4,7 +4,7 @@ name: Szolgaltatasok ellenorzese
 on: push
 
 jobs:
-  koszones:
+  Ellenorzes:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
