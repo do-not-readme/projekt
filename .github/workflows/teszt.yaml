@@ -8,9 +8,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: echo 'Szia a futtatorol!'
-      - run: pwd
-      - run: ls -la
-      - run: docker --version
-      - run: docker compose version
-      - run: whoami
+      - run: docker compose up -d
+      - run: docker compose ps
+      - run: ./szkriptek/ellenorzo.sh
