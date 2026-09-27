@@ -8,8 +8,16 @@ on:
 jobs:
   Ellenorzes:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
     steps:
       - uses: actions/checkout@v4
+      - uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
       - run: docker compose up -d
       - run: docker compose ps
       - run: ./szkriptek/varakozas.sh 8080
@@ -17,3 +25,5 @@ jobs:
       - run: ./szkriptek/varakozas.sh 8082
       - run: docker compose logs
       - run: ./szkriptek/ellenorzo.sh
+      - run: docker build -t ghcr.io/do-not-readme/weboldal:latest ./weboldal
+      - run: docker push ghcr.io/do-not-readme/weboldal:latest
