@@ -20,4 +20,7 @@ Ezert keszitettem egy konteneres valtozatot.
 ## A konteneres valtozat inditasa (aktualis verzio)
 - `docker compose up -d`
 - a weboldalak elerhetok a kovetkezo portokon: 8080, 8081, 8082
-- ellenorzese a `./szkriptek/ellenorzo.sh`- al
+- ellenorzese a `./szkriptek/ellenorzo.sh`- val
+- az `./szkriptek/ellenorzo.sh` minden feltolteskor lefuttat egy ellenorzest
+- a main agba csak PR-en at lehet irni, ha az ellenorzes sikeres
+ 
