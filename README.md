@@ -23,4 +23,7 @@ Ezert keszitettem egy konteneres valtozatot.
 - ellenorzese a `./szkriptek/ellenorzo.sh`- val
 - az `./szkriptek/ellenorzo.sh` minden feltolteskor lefuttat egy ellenorzest
 - a main agba csak PR-en at lehet irni, ha az ellenorzes sikeres
- 
+
+### Image letoltese
+- `docker pull ghcr.io/do-not-readme/weboldal:latest`
+
